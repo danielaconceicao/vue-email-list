@@ -1,25 +1,34 @@
-/* const emails = document.querySelector('.emails');
+const emails = document.querySelector('.emails');
 const btn = document.querySelector('.btn');
- */
 
-/* btn.addEventListener('click', function(){
-    axios.get(" https://flynn.boolean.careers/exercises/api/random/mail")
+btn.addEventListener('click', function () {
+  axios.get(" https://flynn.boolean.careers/exercises/api/random/mail")
     .then(response => {
       console.log(response);
 
-      const emails = response.data.response;
-      
+      const user = response.data.response;
+      const arrNome = [];
 
-    }).catch(err => console.error(err))
+      for (let i = 0; i < 10; i++) {
+        console.log(user)
+      }
 
 
-}) */
 
-const arrNome = [];
-for (let i = 0; i < 10; i++) {
-  const userName = `user${i}`;
-  const userEmail = `${userName}@mante.com`;
-  arrNome.push(userEmail);
-}
+      /* for (let i = 0; i < 10; i++) {
+        const userName = `user${i}`;
+        const userEmail = `${userName}@mante.com`;
+        arrNome.push(userEmail);
+      }
+      console.log(arrNome); 
 
-console.log(arrNome);
+      const paragraph = document.createElement('p');
+      paragraph.textContent = arrNome;
+      emails.insertAdjacentHTML('afterbegin', response); */
+
+    }).catch(err => console.error(err));
+
+
+});
+
+
